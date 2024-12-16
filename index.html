@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Здоровый образ жизни</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Здоровый образ жизни</h1>
+        <nav>
+            <ul>
+                <li><a href="#fitness">Фитнес</a></li>
+                <li><a href="nutrition.html">Питание</a></li>
+                <li><a href="#motivation">Мотивация</a></li>
+                <li><a href="#blog">Блог</a></li>
+                <li><a href="#slider">Слайдер</a></li>
+                <li><a href="#subscribe">Подписка</a></li>
+                <li><a href="#testimonials">Отзывы</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="fitness">
+            <h2>Фитнес</h2>
+            <img src="maxresdefault.jpg" alt="Фитнес" style="width:300px; height:200px;">
+            <p>Лучшие советы по тренировкам и здоровье.</p>
+            <button onclick="goToFitnessPage()">Узнать больше о фитнесе</button>
+        </section>
+        <section id="nutrition">
+            <h2>Питание</h2>
+            <img src="7f9377d2-c6b5-5f71-870d-3a9cacea4137.jpg" alt="Здоровое питание" style="width:300px; height:200px;">
+            <p>Полезные рецепты и советы по питанию.</p>
+            <button onclick="goToNutritionPage()">Узнать больше о питании</button>
+        </section>
+        <section id="motivation">
+            <h2>Мотивация</h2>
+            <img src="orig.webp" alt="Мотивация" style="width:300px; height:200px;">
+            <p>Истории успеха и советы по мотивации.</p>
+            <button onclick="goToMotivationPage()">Узнать больше о мотивации</button>
+        </section>
+        <section id="blog">
+            <h2>Блог</h2>
+            <img src="blog.webp" alt="Блог" style="width:300px; height:200px;">
+            <p>Читайте наши последние статьи.</p>
+            <button onclick="goToBlogPage()">Узнать больше о блоге</button> <!-- Добавлена кнопка для перехода на страницу блога -->
+        </section>
+        
+        <section id="slider">
+            <h2>Наши достижения</h2>
+            <div class="slider">
+                <img src="XXL_height.webp" alt="Йога" class="slide">
+                <img src="maxresdefault.jpg" alt="Упражнения" class="slide">
+                <img src="f915af46-068e-5966-a20e-4a54a99bed04.jpg" alt="Бег" class="slide">
+            </div>
+        </section>
+
+        <section id="subscribe">
+            <h2>Подписаться на новости</h2>
+            <form>
+                <input type="email" placeholder="Введите ваш email" required>
+                <button type="submit">Подписаться</button>
+            </form>
+        </section>
+
+        <section id="testimonials">
+            <h2>Отзывы наших посетителей</h2>
+            <blockquote>
+                <p>«Занимаясь фитнесом, я чувствую себя лучше, чем когда-либо. Эта платформа помогла мне!»</p>
+                <footer>— Анна, 29 лет</footer>
+            </blockquote>
+            <blockquote>
+                <p>«Я изменил свой рацион благодаря этим советам, и результаты не заставили себя ждать!»</p>
+                <footer>— Сергей, 34 года</footer>
+            </blockquote>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Здоровый образ жизни. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function goToFitnessPage() {
+            window.location.href = 'fitness.html'; // Переход на страницу фитнеса
+        }
+
+        function goToNutritionPage() {
+            window.location.href = 'nutrition.html'; // Переход на страницу питания
+        }
+        
+        function goToMotivationPage() {
+            window.location.href = 'motivation.html'; // Переход на страницу мотивации
+        }
+
+        function goToBlogPage() {
+            window.location.href = 'blog.html'; // Переход на страницу блога
+        }
+
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2000); // Меняем изображение каждые 2 секунды
+        }
+    </script>
+</body>
+</html>

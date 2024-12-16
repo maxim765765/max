@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Светлый фон */
+}
+
+header {
+    background: #4CAF50; /* Зеленый цвет для заголовка */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fff; /* Белый фон для секций */
+    border-radius: 8px; /* Закруглённые углы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.slide {
+    width: 100px; / Установите желаемую ширину /
+    height: 100px; / Установите желаемую высоту /
+    width: 100px; / 
+    height: 100px
+    width: 100px; / 
+    height: 100px
+}
+
+#slider h2, #subscribe h2, #testimonials h2 {
+    text-align: center;
+}
+
+#subscribe {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#subscribe input {
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+#subscribe button {
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Зеленый цвет кнопки */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#testimonials blockquote {
+    border-left: 4px solid #4CAF50;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333; /* Темный фон для подвала */
+    color: #fff;
+}

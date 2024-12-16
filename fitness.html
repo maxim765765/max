@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фитнес</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Фитнес</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Фитнес-программы</h2>
+            <p>Здесь вы найдете различные фитнес-программы, советы по тренировке и мотивацию к занятиям спортом.</p>
+            <img src="https://source.unsplash.com/800x400/?training" alt="Тренировка" style="width:100%; border-radius: 8px;">
+        </section>
+
+        <section id="slider">
+            <h2>Популярные упражнения</h2>
+            <div class="slider">
+                <div class="slide">
+                    <img src="https://source.unsplash.com/600x300/?exercise1" alt="Упражнение 1">
+                    <div class="caption">Приседания: Отличное упражнение для тренировки ног.</div>
+                </div>
+                <div class="slide">
+                    <img src="https://source.unsplash.com/600x300/?exercise2" alt="Упражнение 2">
+                    <div class="caption">Планка: Превосходное упражнение для корсета и стабилизаторов.</div>
+                </div>
+                <div class="slide">
+                    <img src="https://source.unsplash.com/600x300/?exercise3" alt="Упражнение 3">
+                    <div class="caption">Отжимания: Укрепляют грудные и трицепсы.</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Популярные Фитнес-Советы</h2>
+            <ul>
+                <li>Регулярные тренировки помогут улучшить общее состояние здоровья.</li>
+                <li>Следите за своим питанием и пейте достаточное количество воды.</li>
+                <li>Не забывайте про разминку перед тренировкой и заминку после.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Преимущества регулярных тренировок</h2>
+            <ul>
+                <li>Увеличение выносливости и силы.</li>
+                <li>Улучшение обмена веществ.</li>
+                <li>Повышение уровня серотонина и улучшение настроения.</li>
+                <li>Снижение риска хронических заболеваний.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Истории успеха</h2>
+            <blockquote>
+                <p>«Занимаясь фитнесом, я чувствуя себя лучше, чем когда-либо. Эта платформа помогла мне улучшить физическую форму!» — Ольга, 25 лет</p>
+            </blockquote>
+            <blockquote>
+                <p>«Я изменил свой образ жизни благодаря этим программам, и результаты действительно впечатляют!» — Дмитрий, 30 лет</p>
+            </blockquote>
+        </section>
+
+        <section id="subscribe">
+            <h2>Подписаться на новости фитнеса</h2>
+            <form>
+                <input type="email" placeholder="Введите ваш email" required>
+                <button type="submit">Подписаться</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Здоровый образ жизни. Все права защищены.</p>
+    </footer>
+
+    <script>
+        // Слайдер
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2000); // Меняем изображение каждые 2 секунды
+        }
+    </script>
+</body>
+</html>
